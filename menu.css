@@ -1,0 +1,99 @@
+body {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 300px;
+    padding-right: 300px;
+    background: linear-gradient(0deg, #d2b5e0 0%, #c6b5e0 100%);
+    color: #fff;
+}
+
+footer {
+    text-align: center;
+    margin-top: 100px;
+}
+
+section.map {background-color: none;
+    color: black;
+    padding: 50px;}
+
+section {
+    background-color: #f0f0f0;
+    color: black;
+    padding: 50px;}
+
+h2 {
+    animation-name: color;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes color {
+    0% {color: #c6b5e0;}
+    100% {color: #d2b5e0;}
+}
+
+#menu {
+    height: 50px;
+    background: #f0f0f0;
+    padding-left: 10%;
+    padding-right: 25%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    color: #63699c;
+}
+
+.main1 {
+    width: 120%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.main1>li {
+    float: left;
+    width: 20%;
+    line-height: 50px;
+    text-align: center;
+    position: relative;
+}
+
+.main1>li:hover .main2 {
+    left: 0;
+}
+
+.main1>li a {
+    display: block;
+}
+
+.main1>li a:hover {
+    background: #63699c;
+    color: #f0f0f0;
+    font-weight: bold;
+}
+
+.main2 {
+    position: absolute;
+    top: 50px;
+    left: -9999px;
+    background: #f0f0f0;
+    width: 100%;
+}
+
+.main2>li {
+    position: relative;
+}
+
+.main2>li a:hover  {
+    left: 100%;
+}
+
+.main2>li a{
+    border-radius: 10px;
+    margin: 10px;
+}
+
+
+
+.main1, .main2{
+    list-style: none;
+    padding-left: 0px;
+}
