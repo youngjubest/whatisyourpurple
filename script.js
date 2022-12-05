@@ -1,19 +1,19 @@
-// icon에 마우스 올려놓을 시 이미지 변경
-var hw = document.getElementById('hw');
-hw.addEventListener('click', function () {
-  alert('Hello world');
-})
+// 모달 창 기능
+for(let i=0;i<35;i++) {
+$(function(){ 
 
-var icon = document.getElementById('icon');
-icon.addEventListener('mouseover', function() {
-    icon.src+="shine.png";
+  $(".item"+i).click(function(){
+    $("#m"+i).fadeIn();
+  });
+  
+  $(".close").click(function(){
+    $("#m"+i).fadeOut();
+  });
+  
+});
 
-})
+}
 
-icon.addEventListener('mouseout', function() {
-    icon.src-="shine.png";
-
-})
 
 // form창 나타내기 및 숨기기
 function toggleForm() {
@@ -42,4 +42,13 @@ function closeBtn() {
   form.style.display = 'none';
   btn.style.display = "";
   
+}
+
+
+function alertA() {
+  if (!confirm("제출하시겠습니까?")) {
+  }
+  else {
+        alert("제출 감사합니다 ♥.");
+  }
 }

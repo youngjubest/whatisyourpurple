@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="menu.css">
+    <style>
+    
+    .rank{
+        text-align: center;
+        font-size: 15px;
+    }
+    #rank {text-align: center;}
+    button {width : 100px; height: 30px;}
+    #vote{
+        line-height: 30px;
+        
+    }
+    #btn{
+        border: 1px solid rgb(249, 188, 255);
+        background-color: white;
+        border-radius: 5px;
+        padding : 5px;
+        width: 100px;
+        text-align: center;
+        
+    }
+    #btn:hover{
+        color : white;
+        background-color: palevioletred;
+    }
+
+    *{
+        font-family: 'Noto Serif KR', serif;
+    }
+
+    </style>
+    <script>
+        var num=1;
+        function changePic(idx){
+            if(idx){
+                if(num == 5) return;
+                num++;
+            } else {
+                if(num == 1) return;
+                num--;
+            }
+            var imgTag = document.getElementById("photo");
+            imgTag.setAttribute("src","img0"+num+".jpg")
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <a href="main.html"><img src="mainlogo.gif" alt="mainlogo" width="100%"></a>
+    </header>
+    <nav>
+        <div id="menu">
+            <ul class="main1">
+                <li><a href="northerneurope.html" style="text-decoration: none;">북유럽</a>
+                    <ul class="main2">
+                        <li><a href="sweden.html" style="text-decoration: none;">스웨덴</a></li>
+                        <li><a href="iceland.html" style="text-decoration: none;">아이슬란드</a></li>
+                        <li><a href="finland.html" style="text-decoration: none;">핀란드</a></li>
+                    </ul>
+                </li>
+                <li><a href="westerneurope.html" style="text-decoration: none;">서유럽</a>
+                    <ul class="main2">
+                        <li><a href="france.html" style="text-decoration: none;">프랑스</a></li>
+                        <li><a href="germany.html" style="text-decoration: none;">독일</a></li>
+                        <li><a href="netherlands.html" style="text-decoration: none;">네덜란드</a></li>
+                    </ul>
+                </li>
+                <li><a href="easterneurope.html" style="text-decoration: none;">동유럽</a>
+                    <ul class="main2">
+                        <li><a href="czech.html" style="text-decoration: none;">체코</a></li>
+                        <li><a href="hungary.html" style="text-decoration: none;">헝가리</a></li>
+                        <li><a href="austria.html" style="text-decoration: none;">오스트리아</a></li>
+                    </ul>
+                </li>
+                <li><a href="southerneurope.html" style="text-decoration: none;">남유럽</a>
+                    <ul class=main2>
+                        <li><a href="portugal.html" style="text-decoration: none;">포르투갈</a></li>
+                        <li><a href="spain.html" style="text-decoration: none;">스페인</a></li>
+                        <li><a href="italy.html" style="text-decoration: none;">이탈리아</a></li>
+                    </ul>
+                </li>
+                <li><a href="notice.html" style="text-decoration: none;">공지사항</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section style="text-align: center;">
+        <br>
+        <img src="map1.jpg" alt="map" width="80%">
+    </section>
+    <section>
+        <div id="rank">
+            <h2>유럽 여행 랭킹</h2><hr>
+            <p><img src="img01.jpg" id="photo" alt="이미지" width="80%" height="300px"></p>
+            <p>
+                <button onclick="changePic(0);"> 이전 </button>
+                <button onclick="changePic(1);"> 다음 </button>
+                <ul type="none" class="rank">
+                    <br>
+                    <li><strong>1.프랑스</strong> 약 8,390만 명의 관광객</li>
+                    <li><strong>2.스페인</strong> 약 8,270만 명의 관광객</li>                 
+                    <li><strong>3.이탈리아</strong> 약 6,150만 명의 관광객</li>
+                    <li><strong>4.독일</strong> 약 3,880만 명의 관광객</li>
+                    <li><strong>5.잉글랜드</strong> 약 3,930만 명의 관광객</li>
+                    </ul>
+                출처 : 2020년에 발표한 The World Bank, 2018 기준
+            </p>
+        </div>
+        <div id="vote">
+        <h2>가장 가보고 싶은 나라는?</h2><hr>
+            <label><input type="radio" name="check" value="spain"> <img src="Flag_of_Spain.jpg" alt="flagofspain" height="80px" width="120px"> 스페인<br></label>
+            <label><input type="radio" name="check" value="sweden"> <img src="Flag_of_Sweden.jpg" alt="flagofsweden" height="80px" width="120px">스웨덴 <br></label>
+            <label><input type="radio" name="check" value="czech"> <img src="Flag_of_the_Czech_Republic.jpg" alt="flagofCzech" height="80px" width="120px">체코<br> </label>
+            <label><input type="radio" name="check" value="iceland"> <img src="Flag_of_Iceland.jpg" alt="flagoficeland" height="80px" width="120px"> 아이슬란드 <br></label>
+            <label><input type="radio" name="check" value="hungary"> <img src="Flag_of_Hungary.jpg" alt="flagofHungary" height="80px" width="120px">헝가리<br></label>
+            <label><input type="radio" name="check" value="italy"> <img src="Flag_of_Italy.jpg" alt="flagofitaly" height="80px" width="120px"> 이탈리아 <br></label>
+            <button id="btn" onclick="alert('투표하시겠습니까?')">확인</button>
+        </div>
+    </section>
+    
+    <footer>
+        <br>
+        제작/개발<br>
+        이수민, 박영주, 황인지
+        <br>
+        문의 메일<br>
+        이수민 : <a href="mailto:19101257@seoultech.ac.kr">19101257@seoultech.ac.kr</a> <br>
+        박영주 : <a href="mailto:20101948@seoultech.ac.kr">20101948@seoultech.ac.kr</a> <br>
+        황인지 : <a href="mailto:17101928@seoultech.ac.kr">17101928@seoultech.ac.kr</a> <br>
+    </footer>
+</body>
+</html>

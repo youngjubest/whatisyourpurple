@@ -8,6 +8,7 @@
 
         <title>what's in my purple?</title>
         <script type="text/javascript" defer src="script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 
         <!-- main logo -->
         <div style="text-align:center;"><a href="mainpage.html"><img src="mainlogocrop.gif" alt="mainlogo" width="65%" ></a></div>
@@ -42,14 +43,16 @@
             </div>
 
             <!-- icons -->
+            <div id="icons">
             <table>
                 <tr>
-                  <td style="width:200px;"><img src="closet.png" width="150px" id="icon"></td>
-                  <td style="width:200px;"><img src="accessary.png" width="150px" id="icon"></td>
-                  <td style="width:200px;"><img src="object.png" width="150px" id="icon"></td>
-                  <td style="width:200px;"><img src="place.png" width="150px" id="icon"></td>
+                  <td style="width:220px;"><a href="closet.html"><img src="closet.png" onmouseover="this.src='closet_on.png';" onmouseout="this.src='closet.png';" width="150px" id="icon"></a></td>
+                  <td style="width:220px;"><a href="acc.html"><img src="accessary.png" onmouseover="this.src='accessary_on.png';" onmouseout="this.src='accessary.png';" width="150px" id="icon"></a></td>
+                  <td style="width:220px;"><a href="object.html"><img src="object.png" onmouseover="this.src='object_on.png';" onmouseout="this.src='object.png';" width="150px" id="icon"></a></td>
+                  <td style="width:220px;"><a href="place.html"><img src="place.png" onmouseover="this.src='place_on.png';" onmouseout="this.src='place.png';" width="150px" id="icon"></a></td>
                 <tr>
             </table>
+          </div>
 
             <!-- form write -->
             <div>
@@ -65,10 +68,10 @@
                   <option value="3">o b j e c t</option>
                   <option value="4">p l a c e</option>
                   </select> <br> <br>
-                <label>대표 이미지가 있나요? <span> u p l o a d </span><input type="file" class="putimg"></label> <br><br>
+                <label>대표 이미지가 있나요? <span id="span"> u p l o a d </span><input type="file" class="putimg"></label> <br><br>
                 <label>정보 페이지 링크를 알려주세요! <input type="url" class="input" placeholder="ex: www.whatsinyourpurple.com" size="30"></label><br><br>
                 <label>코멘트나 개발자에게 할말을 자유롭게 해주세요! <input type="textarea" class="input" placeholder="ex: 흰색 패딩과 매치 시 귀여워요!" size="30"></label>
-                <input type="submit" value="제출" class="btn"><input type="button" value="닫기" class="btn" onclick="closeBtn()">
+                <input type="submit" value="제출" class="btn" onclick="alertA()"><input type="button" value="닫기" class="btn" onclick="closeBtn()">
               </form>
             </div>
         </section>
